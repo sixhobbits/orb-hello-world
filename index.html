@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#05060a">
+    <meta name="description" content="Hello, World — an interactive transmission from a living digital universe.">
+    <title>Hello, World — Orb</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2305060a'/%3E%3Ccircle cx='32' cy='32' r='19' fill='none' stroke='%2396f5de' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%23c5fff1'/%3E%3Cpath d='M8 32h48' stroke='%237a8cff' stroke-width='2' opacity='.75'/%3E%3C/svg%3E">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-state="dormant">
+    <a class="skip-link" href="#main">Skip to transmission</a>
+
+    <canvas id="cosmos" aria-hidden="true"></canvas>
+    <div class="atmosphere" aria-hidden="true">
+      <div class="aurora aurora--one"></div>
+      <div class="aurora aurora--two"></div>
+      <div class="grain"></div>
+      <div class="vignette"></div>
+    </div>
+
+    <div class="page-shell">
+      <header class="site-header" aria-label="Orb transmission header">
+        <a class="brand" href="#main" aria-label="Orb, return to transmission">
+          <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="20.5"></circle>
+            <circle cx="24" cy="24" r="5"></circle>
+            <path d="M3.5 24h41"></path>
+          </svg>
+          <span class="brand__name">OR/B</span>
+        </a>
+
+        <div class="signal">
+          <span class="signal__dot" aria-hidden="true"></span>
+          <span class="signal__label">Listening</span>
+          <span class="signal__time" id="signal-time">00:00:00 UTC</span>
+        </div>
+      </header>
+
+      <main id="main" class="hero">
+        <section class="transmission" aria-labelledby="greeting">
+          <p class="eyebrow">
+            <span>Transmission</span>
+            <span class="eyebrow__rule" aria-hidden="true"></span>
+            <span>Origin 00.00</span>
+          </p>
+
+          <h1 id="greeting" class="greeting">
+            <span class="greeting__line greeting__line--hello">Hello,</span>
+            <span class="greeting__line greeting__line--world">World<span class="greeting__period">.</span></span>
+          </h1>
+
+          <p class="lede">
+            A quiet signal is waiting at the edge of everything.
+            <span>Give it a pulse and see what answers.</span>
+          </p>
+
+          <button class="activate" id="activate" type="button" aria-describedby="interaction-hint">
+            <span class="activate__halo" aria-hidden="true"></span>
+            <span class="activate__core">
+              <span class="activate__label">Awaken the universe</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13M14 7l5 5-5 5"></path>
+              </svg>
+            </span>
+          </button>
+
+          <p class="no-script-note">
+            The signal is present. Enable JavaScript to bend spacetime and awaken it.
+          </p>
+        </section>
+
+        <div class="orbital-field" aria-hidden="true">
+          <div class="coordinate coordinate--top">δ 18° 36′ 56.3″</div>
+          <div class="coordinate coordinate--side">RA 17h 45m 40s</div>
+
+          <div class="orb-shadow"></div>
+          <div class="orbit orbit--outer">
+            <span class="satellite satellite--one"></span>
+          </div>
+          <div class="orbit orbit--middle">
+            <span class="satellite satellite--two"></span>
+          </div>
+          <div class="orbit orbit--inner"></div>
+
+          <div class="orb-wrap">
+            <div class="orb-glow"></div>
+            <div class="orb">
+              <div class="orb__surface"></div>
+              <div class="orb__ocean"></div>
+              <div class="orb__storm"></div>
+              <div class="orb__terminator"></div>
+              <div class="orb__rim"></div>
+              <div class="orb__flare"></div>
+            </div>
+            <div class="orbital-disc"></div>
+          </div>
+
+          <div class="reticle reticle--left"><span></span></div>
+          <div class="reticle reticle--right"><span></span></div>
+        </div>
+
+        <aside class="telemetry" aria-label="Universe telemetry">
+          <div class="telemetry__item">
+            <span class="telemetry__label">Signal</span>
+            <span class="telemetry__value" data-telemetry="signal">0.003 <small>μV</small></span>
+          </div>
+          <div class="telemetry__item">
+            <span class="telemetry__label">Distance</span>
+            <span class="telemetry__value">0.00 <small>AU</small></span>
+          </div>
+          <div class="telemetry__item telemetry__item--phase">
+            <span class="telemetry__label">Phase</span>
+            <span class="telemetry__value" data-telemetry="phase">Dormant</span>
+          </div>
+        </aside>
+
+        <div class="sequence" id="sequence" aria-hidden="true">
+          <div class="sequence__index">01—04</div>
+          <div class="sequence__content">
+            <p class="sequence__label">Activation sequence</p>
+            <p class="sequence__status" id="sequence-status">Opening the aperture</p>
+            <div class="sequence__track"><span></span></div>
+          </div>
+        </div>
+
+        <output class="sr-only" id="announcement" aria-live="polite"></output>
+      </main>
+
+      <footer class="site-footer">
+        <p id="interaction-hint"><span aria-hidden="true">↗</span> Move to bend spacetime</p>
+        <p>One small greeting / one infinite beginning</p>
+        <p class="site-footer__code">HW—0001</p>
+      </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
